@@ -27,6 +27,35 @@
       "links": [],
       "x": 1000,
       "y": 300
+    },
+    {
+      "id": "sd-curso-galego",
+      "trackId": "system-design",
+      "title": "Curso de System Design · Augusto Galego",
+      "date": "2026-11-12",
+      "tags": ["curso", "system design"],
+      "notes": [
+        {
+          "date": "2026-11-12",
+          "text": "Comecei hoje o curso de System Design do Augusto Galego 🚀"
+        }
+      ],
+      "source": {
+        "type": "youtube",
+        "videoId": "PJ5G4J47qUk",
+        "title": "Lancei Meu Curso de System Design + Q&A",
+        "channel": "Augusto Galego",
+        "url": "https://www.youtube.com/watch?v=PJ5G4J47qUk"
+      },
+      "course": {
+        "name": "System Design · Augusto Galego",
+        "url": "https://www.augustogalego.com/courses",
+        "closed": true,
+        "endDate": null
+      },
+      "links": [],
+      "x": 1000,
+      "y": 860
     }
   ]
 }
