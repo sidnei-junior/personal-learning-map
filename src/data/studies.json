@@ -1,0 +1,32 @@
+{
+  "tracks": [
+    {
+      "id": "system-design",
+      "title": "SYSTEM DESIGN",
+      "subtitle": "arquitetura de sistemas",
+      "color": "pink",
+      "x": 520,
+      "y": 380
+    }
+  ],
+  "studies": [
+    {
+      "id": "sd-ticketmaster",
+      "trackId": "system-design",
+      "title": "Arquitetando o Ticketmaster na prática",
+      "date": "2026-11-12",
+      "tags": ["system design", "requisitos", "arquitetura"],
+      "notes": "Primeiro passo de toda arquitetura é levantar os requisitos funcionais e não funcionais...",
+      "source": {
+        "type": "youtube",
+        "videoId": "3XSijmIZxXU",
+        "title": "ARQUITETANDO O TICKETMASTER NA PRÁTICA | SYSTEM DESIGN",
+        "channel": "Renato Augusto",
+        "url": "https://www.youtube.com/watch?v=3XSijmIZxXU"
+      },
+      "links": [],
+      "x": 1000,
+      "y": 300
+    }
+  ]
+}
