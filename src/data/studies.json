@@ -15,7 +15,7 @@
       "trackId": "system-design",
       "title": "Arquitetando o Ticketmaster na prática",
       "date": "2026-11-12",
-      "tags": ["system design", "requisitos", "arquitetura"],
+      "tags": ["system design", "requisitos", "arquitetura", "renato augusto"],
       "notes": "Primeiro passo de toda arquitetura é levantar os requisitos funcionais e não funcionais...",
       "source": {
         "type": "youtube",
@@ -56,6 +56,24 @@
       "links": [],
       "x": 1000,
       "y": 860
+    },
+    {
+      "id": "sd-cache-aside",
+      "trackId": "system-design",
+      "title": "Cache-Aside: escalabilidade e performance",
+      "date": "2026-11-12",
+      "tags": ["cache", "cache-aside", "performance", "system design", "renato augusto"],
+      "notes": "Fatores para considerar o uso de cache: o dado é muito requisitado, pode ser eventualmente consistente e não é muito volátil.",
+      "source": {
+        "type": "youtube",
+        "videoId": "vRO0UfvsbDw",
+        "title": "CACHE-ASIDE: Escalabilidade, Performance e Arquitetura de Software pra Mandar Bem na Entrevista!",
+        "channel": "Renato Augusto",
+        "url": "https://www.youtube.com/watch?v=vRO0UfvsbDw"
+      },
+      "links": ["sd-ticketmaster"],
+      "x": 1460,
+      "y": 300
     }
   ]
 }

@@ -242,14 +242,26 @@ button {
   position: absolute;
   inset: 0;
   overflow: visible;
+  /* above nodes so the plugs sit on the borders; hovered cards go higher */
+  z-index: 2;
+  pointer-events: none;
 }
 
 .wire {
+  fill: none;
   stroke-width: 3;
   stroke-dasharray: 6 6;
+  stroke-linejoin: miter;
   stroke: var(--neon, var(--cyan));
   filter: drop-shadow(0 0 4px var(--neon, var(--cyan)));
   animation: wire-flow 1.2s linear infinite;
+}
+
+.wire-plug {
+  fill: var(--bg);
+  stroke: var(--neon, var(--cyan));
+  stroke-width: 3;
+  filter: drop-shadow(0 0 4px var(--neon, var(--cyan)));
 }
 
 .wire--pink { --neon: var(--pink); }
@@ -264,6 +276,7 @@ button {
 
 .node {
   position: absolute;
+  z-index: 1;
   transform: translate(-50%, -50%);
 }
 

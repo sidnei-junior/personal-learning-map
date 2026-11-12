@@ -49,7 +49,7 @@ export interface Study {
   notes: string | NoteEntry[]
   source?: YoutubeSource
   course?: Course
-  /** Ids of other studies this one connects to. */
+  /** Previous study in a series. When set, this study chains to it instead of the track. */
   links?: string[]
   x: number
   y: number

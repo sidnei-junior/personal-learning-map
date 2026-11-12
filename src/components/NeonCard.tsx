@@ -20,6 +20,7 @@ export function NeonCard({ study, color, onOpen }: Props) {
   return (
     <article
       className={`node card neon--${color}`}
+      data-node-id={`study:${study.id}`}
       style={{ left: study.x, top: study.y }}
       tabIndex={0}
     >
