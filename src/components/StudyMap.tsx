@@ -28,15 +28,15 @@ export function StudyMap({ data, onOpen }: Props) {
 
   const wires: { key: string; x1: number; y1: number; x2: number; y2: number; color: string }[] = []
   for (const s of data.studies) {
+    // `links` = previous study in a series. Only the first of a series
+    // (no valid link) is wired to the track; the rest chain to each other.
+    const previous = (s.links ?? []).map((id) => studyById.get(id)).filter((p) => p !== undefined)
     const track = trackById.get(s.trackId)
-    if (track) {
+    if (track && previous.length === 0) {
       wires.push({ key: `${track.id}-${s.id}`, x1: track.x, y1: track.y, x2: s.x, y2: s.y, color: track.color })
     }
-    for (const linkId of s.links ?? []) {
-      const other = studyById.get(linkId)
-      if (other && s.id < other.id) {
-        wires.push({ key: `${s.id}-${other.id}`, x1: s.x, y1: s.y, x2: other.x, y2: other.y, color: 'violet' })
-      }
+    for (const p of previous) {
+      wires.push({ key: `${p.id}-${s.id}`, x1: p.x, y1: p.y, x2: s.x, y2: s.y, color: 'violet' })
     }
   }
 
