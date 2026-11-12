@@ -518,3 +518,107 @@ button {
     animation: none;
   }
 }
+
+/* ---------- tooltip entries ---------- */
+.tooltip__entry + .tooltip__entry {
+  margin-top: 10px;
+  padding-top: 8px;
+  border-top: 2px dashed rgba(255, 181, 71, 0.35);
+}
+
+.tooltip__entry time {
+  display: block;
+  margin-top: 8px;
+  color: var(--amber);
+  font-size: 16px;
+}
+
+.tooltip__entry time + p {
+  margin-top: 2px;
+}
+
+/* ---------- course ---------- */
+a.pixel-btn {
+  display: inline-block;
+  text-decoration: none;
+}
+
+.pixel-btn--amber:hover,
+.pixel-btn--amber:focus-visible {
+  background: var(--amber);
+}
+
+.course {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.course__dates {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 8px;
+  margin: 0;
+}
+
+.course__dates div {
+  padding: 6px 8px;
+  border: 2px solid rgba(255, 255, 255, 0.15);
+  background: rgba(0, 0, 0, 0.25);
+}
+
+.course__dates dt {
+  font-family: var(--font-title);
+  font-size: 8px;
+  text-transform: uppercase;
+  color: var(--muted);
+}
+
+.course__dates dd {
+  margin: 4px 0 0;
+  font-size: 18px;
+  color: var(--neon, var(--ink));
+}
+
+.course__dates dd.course__pending {
+  color: var(--muted);
+}
+
+.course__actions {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  padding: 3px;
+}
+
+.card .course__actions .pixel-btn {
+  margin: 0;
+}
+
+.course__badge {
+  font-family: var(--font-title);
+  font-size: 8px;
+  text-transform: uppercase;
+  padding: 4px 6px;
+  color: var(--amber);
+  border: 2px solid var(--amber);
+}
+
+/* ---------- modal notes log ---------- */
+.modal .course {
+  margin-bottom: 18px;
+}
+
+.note + .note {
+  margin-top: 16px;
+  padding-top: 12px;
+  border-top: 2px dashed rgba(62, 242, 255, 0.3);
+}
+
+.note time {
+  font-size: 18px;
+}
+
+.note p {
+  margin: 4px 0 0;
+}

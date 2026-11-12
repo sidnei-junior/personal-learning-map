@@ -1,6 +1,8 @@
 import { useEffect } from 'react'
 import type { Study } from '../data/types'
 import { formatDate } from '../utils/date'
+import { noteEntries } from '../utils/notes'
+import { CourseInfo } from './CourseInfo'
 import { YoutubeEmbed } from './YoutubeEmbed'
 
 interface Props {
@@ -28,8 +30,9 @@ export function StudyDetail({ study, onClose }: Props) {
         <button type="button" className="pixel-btn modal__close" onClick={onClose} aria-label="Fechar">
           ✕
         </button>
-        <time dateTime={study.date}>{formatDate(study.date)}</time>
+        {!study.course && <time dateTime={study.date}>{formatDate(study.date)}</time>}
         <h2 id="study-title">{study.title}</h2>
+        {study.course && <CourseInfo study={study} course={study.course} />}
         {study.source?.type === 'youtube' && (
           <>
             <YoutubeEmbed source={study.source} />
@@ -39,8 +42,13 @@ export function StudyDetail({ study, onClose }: Props) {
           </>
         )}
         <div className="modal__notes">
-          {study.notes.split('\n').map((p, i) => (
-            <p key={i}>{p}</p>
+          {noteEntries(study).map((n, i) => (
+            <section key={i} className="note">
+              {n.date && <time dateTime={n.date}>{formatDate(n.date)}</time>}
+              {n.text.split('\n').map((p, j) => (
+                <p key={j}>{p}</p>
+              ))}
+            </section>
           ))}
         </div>
       </div>

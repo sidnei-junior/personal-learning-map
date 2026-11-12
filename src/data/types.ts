@@ -19,17 +19,36 @@ export interface YoutubeSource {
   url: string
 }
 
-/** A single study entry (lesson, video, article...). */
+export interface Course {
+  name: string
+  url: string
+  /** Paid / closed course */
+  closed?: boolean
+  /** ISO date of completion; null while in progress. */
+  endDate: string | null
+}
+
+/** A dated note, appended over time (used mainly for courses). */
+export interface NoteEntry {
+  date: string
+  text: string
+}
+
+/** A single study entry (lesson, video, article, course...). */
 export interface Study {
   id: string
   trackId: string
   title: string
-  /** ISO date, YYYY-MM-DD */
+  /** ISO date, YYYY-MM-DD. For courses, this is the start date. */
   date: string
   tags: string[]
-  /** Free text; shown truncated in the hover tooltip, full in the detail view. */
-  notes: string
+  /**
+   * Free text, or a list of dated entries (newest last).
+   * Shown truncated in the hover tooltip, full in the detail view.
+   */
+  notes: string | NoteEntry[]
   source?: YoutubeSource
+  course?: Course
   /** Ids of other studies this one connects to. */
   links?: string[]
   x: number
