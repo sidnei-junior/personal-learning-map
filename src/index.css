@@ -125,7 +125,8 @@ button {
 }
 
 .cover__window {
-  width: min(560px, 90vw);
+  /* 16:10, as large as fits while leaving room for title + button */
+  width: min(860px, 90vw, (100vh - 300px) * 1.6);
   aspect-ratio: 16 / 10;
   border: 6px solid #2a1f3d;
   outline: 3px solid var(--amber);
@@ -138,7 +139,8 @@ button {
   width: 100%;
   height: 100%;
   object-fit: cover;
-  image-rendering: pixelated;
+  /* image is larger than displayed: smooth downscale avoids jagged pixels */
+  image-rendering: auto;
   display: block;
 }
 
