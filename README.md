@@ -22,7 +22,7 @@ Tudo está em [`src/data/studies.json`](src/data/studies.json):
 
 ## Capa
 
-Coloque a imagem em `public/cover.png`. Enquanto ela não existir, aparece um placeholder.
+A capa é `public/cover.png` (16:10, ~1600×1000, pixel art). Para trocar, basta substituir o arquivo; se ele não existir, aparece um placeholder.
 
 ## Deploy
 
