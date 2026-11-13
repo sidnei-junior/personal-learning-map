@@ -3,6 +3,7 @@ import type { Study } from '../data/types'
 import { formatDate } from '../utils/date'
 import { noteEntries } from '../utils/notes'
 import { CourseInfo } from './CourseInfo'
+import { CoverImage } from './CoverImage'
 import { YoutubeEmbed } from './YoutubeEmbed'
 
 interface Props {
@@ -33,13 +34,15 @@ export function StudyDetail({ study, onClose }: Props) {
         {!study.course && <time dateTime={study.date}>{formatDate(study.date)}</time>}
         <h2 id="study-title">{study.title}</h2>
         {study.course && <CourseInfo study={study} course={study.course} />}
-        {study.source?.type === 'youtube' && (
+        {study.source?.type === 'youtube' ? (
           <>
             <YoutubeEmbed source={study.source} />
             <a className="modal__link" href={study.source.url} target="_blank" rel="noreferrer">
               abrir no YouTube ↗
             </a>
           </>
+        ) : (
+          <CoverImage study={study} />
         )}
         <div className="modal__notes">
           {noteEntries(study).map((n, i) => (

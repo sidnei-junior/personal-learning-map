@@ -49,6 +49,8 @@ export interface Study {
   notes: string | NoteEntry[]
   source?: YoutubeSource
   course?: Course
+  /** Image URL shown in place of the video when there is no YouTube source. */
+  cover?: string
   /** Previous study in a series. When set, this study chains to it instead of the track. */
   links?: string[]
   x: number

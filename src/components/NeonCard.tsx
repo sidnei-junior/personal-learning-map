@@ -1,6 +1,7 @@
 import type { Study, NeonColor } from '../data/types'
 import { YoutubeEmbed } from './YoutubeEmbed'
 import { CourseInfo } from './CourseInfo'
+import { CoverImage } from './CoverImage'
 import { formatDate } from '../utils/date'
 import { latestEntries, noteEntries, truncate } from '../utils/notes'
 
@@ -43,7 +44,7 @@ export function NeonCard({ study, color, onOpen }: Props) {
 
       {study.course && <CourseInfo study={study} course={study.course} />}
 
-      {study.source?.type === 'youtube' && <YoutubeEmbed source={study.source} />}
+      {study.source?.type === 'youtube' ? <YoutubeEmbed source={study.source} /> : <CoverImage study={study} />}
 
       <ul className="card__tags">
         {study.tags.map((t) => (

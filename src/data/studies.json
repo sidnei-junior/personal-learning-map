@@ -15,6 +15,14 @@
       "color": "cyan",
       "x": 520,
       "y": 1600
+    },
+    {
+      "id": "ia",
+      "title": "IA",
+      "subtitle": "programando com IA",
+      "color": "amber",
+      "x": 520,
+      "y": 2340
     }
   ],
   "studies": [
@@ -100,6 +108,29 @@
       "links": [],
       "x": 1000,
       "y": 1600
+    },
+    {
+      "id": "ia-curso-deschamps",
+      "trackId": "ia",
+      "title": "Curso de IA · Filipe Deschamps",
+      "date": "2026-10-05",
+      "tags": ["curso", "ia", "tabnews", "filipe deschamps"],
+      "notes": [
+        {
+          "date": "2026-11-13",
+          "text": "Comecei o curso do Deschamps há algumas semanas. Por enquanto, ele trouxe muito sobre a visão dele e sobre a mentalidade do profissional que usa IA. Agora ele iniciou as configurações para começar a construção do projeto: uma cópia do TabNews, mas com auxílio de IA."
+        }
+      ],
+      "course": {
+        "name": "IA para quem programa de verdade · Filipe Deschamps",
+        "url": "https://curso.dev/ia",
+        "closed": true,
+        "endDate": null
+      },
+      "cover": "https://curso.dev/ia/ia-share.jpg",
+      "links": [],
+      "x": 1000,
+      "y": 2340
     }
   ]
 }
