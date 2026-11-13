@@ -28,6 +28,12 @@ export interface Course {
   endDate: string | null
 }
 
+export interface StudyLink {
+  /** Short name of the site, e.g. "LeetCode". */
+  label: string
+  url: string
+}
+
 /** A dated note, appended over time (used mainly for courses). */
 export interface NoteEntry {
   date: string
@@ -51,6 +57,10 @@ export interface Study {
   course?: Course
   /** Image URL shown in place of the video when there is no YouTube source. */
   cover?: string
+  /** `diagram`: show the whole image (no crop) with inverted colors, for light diagrams. */
+  coverStyle?: 'photo' | 'diagram'
+  /** Generic external link (problem, article, docs, repo...). */
+  link?: StudyLink
   /** Previous study in a series. When set, this study chains to it instead of the track. */
   links?: string[]
   x: number

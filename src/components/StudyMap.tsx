@@ -5,7 +5,7 @@ import { elbowWire, type Box, type ElbowWire } from '../utils/wires'
 import { NeonCard } from './NeonCard'
 
 const WORLD_W = 2400
-const WORLD_H = 2800
+const WORLD_H = 3500
 /** Size of the square "plug" at each wire end. */
 const PLUG = 10
 
