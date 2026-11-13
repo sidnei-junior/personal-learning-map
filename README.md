@@ -27,3 +27,7 @@ A capa é `public/cover.png` (16:10, ~1600×1000, pixel art). Para trocar, basta
 ## Deploy
 
 Projeto Vite padrão, então o Vercel detecta sozinho (build `npm run build`, saída `dist`).
+
+## Registrando estudos com o Claude Code
+
+Este repo tem a skill [`/relatar`](.claude/skills/relatar/SKILL.md): ela pergunta passo a passo o link, as anotações e os metadados (trilha, série, tags), calcula a posição do card no mapa e abre o PR. Também serve para adicionar anotações a um estudo existente.
