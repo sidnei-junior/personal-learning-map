@@ -7,6 +7,14 @@
       "color": "pink",
       "x": 520,
       "y": 380
+    },
+    {
+      "id": "golang",
+      "title": "GOLANG",
+      "subtitle": "concorrência e runtime",
+      "color": "cyan",
+      "x": 520,
+      "y": 1600
     }
   ],
   "studies": [
@@ -74,6 +82,24 @@
       "links": ["sd-ticketmaster"],
       "x": 1460,
       "y": 300
+    },
+    {
+      "id": "go-goroutines-threads",
+      "trackId": "golang",
+      "title": "Diferença entre goroutines e threads",
+      "date": "2026-11-12",
+      "tags": ["go", "goroutines", "threads", "concorrência", "tiago temporin"],
+      "notes": "Uma thread é uma unidade de execução dentro de um processo, gerenciada pelo sistema operacional, que roda em um núcleo da CPU. Já as goroutines são gerenciadas pelo runtime do Go: ficam enfileiradas no P (Processor) e são executadas por threads do sistema (M). Sempre que uma thread fica livre, ela pega a próxima goroutine da fila. Existe uma diferença entre tarefas I/O-bound e CPU-bound: em tarefas de I/O, como fazer requisições, a goroutine fica esperando o retorno e, enquanto isso, a thread já passa a vez para outra goroutine. Já as tarefas CPU-bound ocupam a thread de fato, então o paralelismo fica limitado ao número de núcleos (GOMAXPROCS).",
+      "source": {
+        "type": "youtube",
+        "videoId": "kgLRzWllVyo",
+        "title": "Afinal, qual a DIFERENÇA entre GOROUTINES e THREADS?",
+        "channel": "Tiago Temporin",
+        "url": "https://www.youtube.com/watch?v=kgLRzWllVyo"
+      },
+      "links": [],
+      "x": 1000,
+      "y": 1600
     }
   ]
 }
