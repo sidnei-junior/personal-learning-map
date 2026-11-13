@@ -46,6 +46,12 @@ export function NeonCard({ study, color, onOpen }: Props) {
 
       {study.source?.type === 'youtube' ? <YoutubeEmbed source={study.source} /> : <CoverImage study={study} />}
 
+      {study.link && (
+        <a className="pixel-btn pixel-btn--amber no-pan" href={study.link.url} target="_blank" rel="noreferrer">
+          ↗ abrir no {study.link.label}
+        </a>
+      )}
+
       <ul className="card__tags">
         {study.tags.map((t) => (
           <li key={t}>#{t}</li>

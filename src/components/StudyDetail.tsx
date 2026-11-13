@@ -44,6 +44,11 @@ export function StudyDetail({ study, onClose }: Props) {
         ) : (
           <CoverImage study={study} />
         )}
+        {study.link && (
+          <a className="modal__link" href={study.link.url} target="_blank" rel="noreferrer">
+            abrir no {study.link.label} ↗
+          </a>
+        )}
         <div className="modal__notes">
           {noteEntries(study).map((n, i) => (
             <section key={i} className="note">

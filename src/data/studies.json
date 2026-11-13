@@ -11,7 +11,7 @@
     {
       "id": "golang",
       "title": "GOLANG",
-      "subtitle": "concorrência e runtime",
+      "subtitle": "linguagem e prática",
       "color": "cyan",
       "x": 520,
       "y": 1600
@@ -22,7 +22,7 @@
       "subtitle": "programando com IA",
       "color": "amber",
       "x": 520,
-      "y": 2340
+      "y": 3120
     }
   ],
   "studies": [
@@ -110,6 +110,23 @@
       "y": 1600
     },
     {
+      "id": "go-leetcode-max-depth",
+      "trackId": "golang",
+      "title": "LeetCode 104 · Maximum Depth of Binary Tree",
+      "date": "2026-11-13",
+      "tags": ["leetcode", "go", "árvore binária", "dfs", "recursão"],
+      "notes": "Resolvi usando busca em profundidade (do inglês Depth-First Search, DFS) recursiva, em pós-ordem. Sempre reviso minha solução com o ChatGPT e encontrei uma solução levemente mais eficiente: DFS iterativa, com pilha explícita guardando cada nó junto com sua profundidade. As duas são O(n) em tempo, mas a iterativa evita o custo das chamadas recursivas e não corre risco de estourar a pilha de chamadas em árvores muito profundas.",
+      "link": {
+        "label": "LeetCode",
+        "url": "https://leetcode.com/problems/maximum-depth-of-binary-tree/"
+      },
+      "cover": "https://assets.leetcode.com/uploads/2020/11/26/tmp-tree.jpg",
+      "coverStyle": "diagram",
+      "links": [],
+      "x": 1000,
+      "y": 2360
+    },
+    {
       "id": "ia-curso-deschamps",
       "trackId": "ia",
       "title": "Curso de IA · Filipe Deschamps",
@@ -130,7 +147,7 @@
       "cover": "https://curso.dev/ia/ia-share.jpg",
       "links": [],
       "x": 1000,
-      "y": 2340
+      "y": 3120
     }
   ]
 }

@@ -471,6 +471,13 @@ a.yt--cover {
   cursor: pointer;
 }
 
+/* light diagrams: keep the whole image and flip it to the dark theme */
+.yt--diagram img {
+  object-fit: contain;
+  padding: 8px;
+  filter: invert(1) hue-rotate(180deg) brightness(1.1);
+}
+
 .yt--playing iframe {
   width: 100%;
   height: 100%;
