@@ -96,6 +96,42 @@
       "y": 300
     },
     {
+      "id": "sd-youtube",
+      "trackId": "system-design",
+      "title": "Arquitetando o YouTube na prática",
+      "date": "2026-11-14",
+      "tags": ["system design", "streaming", "upload", "aws mediaconvert", "renato augusto"],
+      "notes": "O grande desafio de arquitetar o YouTube é suportar o enorme volume de uploads que acontece diariamente. A solução de streaming também é muito interessante: o Renato mostra o uso do AWS Elemental MediaConvert, que transcodifica cada vídeo enviado em várias resoluções e taxas de bits e o divide em segmentos. Isso permite o streaming adaptativo (HLS/DASH), em que o player troca a qualidade conforme a conexão, com os segmentos servidos por uma CDN.",
+      "source": {
+        "type": "youtube",
+        "videoId": "JBivKeZVex0",
+        "title": "ARQUITETANDO O YOUTUBE NA PRÁTICA | SYSTEM DESIGN",
+        "channel": "Renato Augusto",
+        "url": "https://www.youtube.com/watch?v=JBivKeZVex0"
+      },
+      "links": ["sd-cache-aside"],
+      "x": 1920,
+      "y": 300
+    },
+    {
+      "id": "sd-encurtador-url",
+      "trackId": "system-design",
+      "title": "Arquitetando um encurtador de URL",
+      "date": "2026-11-14",
+      "tags": ["system design", "encurtador de url", "base 62", "redis", "renato augusto"],
+      "notes": "Muito interessante o desafio de arquitetar um encurtador de URL. O que achei mais interessante foi a estratégia de usar um salt para embaralhar o alfabeto da base 62. Assim dá para usar um contador decimal sequencial no Redis (com INCR, que é atômico e evita colisões) para identificar cada nova URL, sem que os códigos gerados fiquem previsíveis. Com 7 caracteres em base 62, são cerca de 3,5 trilhões de combinações.",
+      "source": {
+        "type": "youtube",
+        "videoId": "m_anIoKW7Jg",
+        "title": "Arquitetando um Encurtador de URL: O Maior Desafio dos Programadores em Entrevistas de System Design",
+        "channel": "Renato Augusto",
+        "url": "https://www.youtube.com/watch?v=m_anIoKW7Jg"
+      },
+      "links": ["sd-youtube"],
+      "x": 2380,
+      "y": 300
+    },
+    {
       "id": "go-goroutines-threads",
       "trackId": "golang",
       "title": "Diferença entre goroutines e threads",
