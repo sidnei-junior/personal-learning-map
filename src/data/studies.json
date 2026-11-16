@@ -58,6 +58,10 @@
         {
           "date": "2026-11-13",
           "text": "Hoje revisei conceitos básicos de banco de dados, revisitando os dois paradigmas: SQL e NoSQL."
+        },
+        {
+          "date": "2026-11-16",
+          "text": "Hoje vi três aulas. A primeira explicou os bancos que seguem as propriedades ACID: Atomicity (atomicidade: a transação acontece por inteiro ou não acontece), Consistency (consistência: o banco sai de um estado válido para outro), Isolation (isolamento: transações simultâneas não interferem umas nas outras) e Durability (durabilidade: depois do commit, o dado não se perde). A segunda tratou dos bancos que seguem o modelo BASE: Basically Available (basicamente disponível), Soft State (estado flexível, que pode mudar mesmo sem novas escritas) e Eventual Consistency (consistência eventual: as réplicas convergem com o tempo). A terceira deu uma visão geral sobre como escolher o banco de dados ao desenhar um sistema: dá para começar com um banco SQL e depois trocar ou adicionar outros bancos conforme os requisitos ficam mais claros."
         }
       ],
       "source": {
