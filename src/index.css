@@ -214,6 +214,80 @@ button {
   color: var(--muted);
 }
 
+/* map / feed switch */
+.view-toggle {
+  display: flex;
+  gap: 10px;
+}
+
+.view-toggle .pixel-btn[aria-pressed='true'] {
+  color: var(--bg);
+  background: var(--pink);
+}
+
+/* ---------- feed (one row per day) ---------- */
+.feed {
+  position: absolute;
+  inset: 0;
+  overflow-y: auto;
+  padding: 90px 40px 60px;
+}
+
+.feed__day {
+  max-width: 1200px;
+  margin: 0 auto 56px;
+}
+
+.feed__date {
+  display: flex;
+  align-items: baseline;
+  gap: 16px;
+  margin-bottom: 20px;
+  padding-bottom: 8px;
+  border-bottom: 2px dashed rgba(138, 147, 201, 0.4);
+}
+
+.feed__date time {
+  font-family: var(--font-title);
+  font-size: 14px;
+  color: var(--cyan);
+  text-shadow: 0 0 4px var(--cyan), 0 0 12px var(--cyan);
+}
+
+.feed__date span {
+  color: var(--muted);
+}
+
+.feed__row {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-start;
+  gap: 28px;
+}
+
+.card--feed {
+  position: relative;
+}
+
+.card__event {
+  font-family: var(--font-title);
+  font-size: 10px;
+  color: var(--neon);
+  text-transform: uppercase;
+}
+
+.card__track {
+  color: var(--muted);
+}
+
+.card__note {
+  margin: 0;
+  padding: 10px 12px;
+  border-left: 3px solid var(--amber);
+  background: rgba(255, 181, 71, 0.06);
+  line-height: 1.15;
+}
+
 .map-controls {
   position: absolute;
   right: 24px;
@@ -651,4 +725,9 @@ a.pixel-btn {
 
 .note p {
   margin: 4px 0 0;
+}
+
+/* in the feed, cards scroll under the topbar: give it a solid fade */
+.topbar--feed {
+  background: linear-gradient(var(--bg) 70%, transparent);
 }
